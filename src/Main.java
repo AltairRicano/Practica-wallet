@@ -46,10 +46,8 @@ public class Main {
                     Premio seleccionado = premios.get(aux - 1);
                     int costo = seleccionado.getCostoTickets(BilleteraParque.getFestivo());
 
-                    if ( costo <= B1.getTickets() ) {
-                        B1.removerTickets(costo);
+                    if ( B1.removerTickets(costo) ) {
                         System.out.println("Has comprado: " + seleccionado.getNombre());
-                        B1.removerTickets(costo);
                     } else {
                         System.out.println("No tienes suficientes tickets para comprar este premio.");
                     }
